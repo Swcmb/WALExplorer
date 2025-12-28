@@ -1,16 +1,11 @@
 # WALExplorer
 
-<div align="center">
 
-![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15.15-blue.svg)
+![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)![License](https://img.shields.io/badge/license-MIT-green.svg)![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15.15-blue.svg)
 
 **一个功能完整的 PostgreSQL WAL 文件解析工具**
 
 [功能特性](#功能特性) • [快速开始](#快速开始) • [使用文档](#使用文档) • [架构设计](#架构设计)
-
-</div>
 
 ---
 
@@ -330,7 +325,7 @@ A: 当前支持基本数据类型，复杂类型正在开发中。
 
 ## 📄 许可证
 
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件
+本项目采用 PostgreSQL 许可证 - 详见 [LICENSE](LICENSE) 文件
 
 ---
 
