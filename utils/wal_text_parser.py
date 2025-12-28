@@ -5,24 +5,39 @@ WAL文本文件解析器
 
 import re
 from typing import List, Dict, Any, Optional
-from dataclasses import dataclass
 from core.wal_parser import get_rmgr_name
 
 
-@dataclass
 class WALTextRecord:
     """
     文本格式的WAL记录
     """
-    rmgr: str              # 资源管理器名称
-    rmgr_id: int           # 资源管理器ID
-    length: int            # 记录长度
-    total_length: int      # 总长度
-    tx_id: int             # 事务ID
-    lsn: str               # LSN
-    prev_lsn: str          # 前一个LSN
-    description: str       # 描述信息
-    raw_line: str          # 原始文本行
+    
+    def __init__(self, rmgr: str, rmgr_id: int, length: int, total_length: int,
+                 tx_id: int, lsn: str, prev_lsn: str, description: str, raw_line: str):
+        """
+        初始化WAL文本记录
+        
+        Args:
+            rmgr: 资源管理器名称
+            rmgr_id: 资源管理器ID
+            length: 记录长度
+            total_length: 总长度
+            tx_id: 事务ID
+            lsn: LSN
+            prev_lsn: 前一个LSN
+            description: 描述信息
+            raw_line: 原始文本行
+        """
+        self.rmgr = rmgr
+        self.rmgr_id = rmgr_id
+        self.length = length
+        self.total_length = total_length
+        self.tx_id = tx_id
+        self.lsn = lsn
+        self.prev_lsn = prev_lsn
+        self.description = description
+        self.raw_line = raw_line
 
 
 class WALTextParser:

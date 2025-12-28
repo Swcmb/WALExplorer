@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """
 WALExplorer主程序
 PostgreSQL WAL文件解析工具的命令行接口
