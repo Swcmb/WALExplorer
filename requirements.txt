@@ -1,0 +1,2 @@
+# WALExplorer Python 依赖
+# 本项目仅使用 Python 标准库，无需安装第三方依赖
