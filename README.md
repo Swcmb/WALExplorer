@@ -43,21 +43,13 @@ WALExplorer/
 ### 1. 克隆或下载项目
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/Swcmb/WALExplorer
 cd WALExplorer
 ```
 
 ### 2. 安装依赖
 
-本项目仅使用 Python 标准库，无需安装第三方依赖：
-
-```bash
-# 查看依赖文件
-cat requirements.txt
-
-# 如需使用 pip 安装（虽然本项目无需任何第三方依赖）
-pip install -r requirements.txt
-```
+本项目仅使用 Python 标准库，无需安装第三方依赖
 
 ### 3. 验证安装
 
@@ -165,28 +157,6 @@ COMMIT;  -- 事务ID: 500
 2. **DDL 支持**：仅支持基本的 DDL 语句解析
 3. **平台支持**：优先保证功能正确性，性能为次要考虑
 
-## 参考资源
-
-本项目的开发参考了以下项目：
-
-- **WalMiner**：一个用 C 语言实现的 PostgreSQL WAL 解析工具，可作为 PostgreSQL 扩展安装。GitHub: https://github.com/666pulse/walminer
-- **XLogMiner**：PostgreSQL WAL 日志解析工具。Gitee: https://gitee.com/movead/XLogMiner
-
-## 开发和扩展
-
-### 添加新的记录类型解析器
-
-1. 在 `parsers/` 目录下创建新的解析器文件
-2. 实现解析逻辑，继承基础解析器类
-3. 在 `sql_formatter.py` 中添加对应的 SQL 生成逻辑
-4. 更新资源管理器 ID 映射
-
-### 自定义输出格式
-
-1. 在 `output/` 目录下创建新的格式化器
-2. 实现格式化接口
-3. 在主程序中添加格式选择选项
-
 ## 故障排除
 
 ### 常见问题
@@ -202,6 +172,13 @@ COMMIT;  -- 事务ID: 500
 ```bash
 python main.py /path/to/wal/file --verbose
 ```
+
+## 参考资源
+
+本项目的开发参考了以下项目：
+
+- **WalMiner**：一个用 C 语言实现的 PostgreSQL WAL 解析工具，可作为 PostgreSQL 扩展安装。GitHub: https://github.com/666pulse/walminer
+- **XLogMiner**：PostgreSQL WAL 日志解析工具。Gitee: https://gitee.com/movead/XLogMiner
 
 ## 许可证
 
